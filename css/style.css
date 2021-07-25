@@ -11,10 +11,8 @@
 }
 
 body {
+	overflow-x: hidden;
 	font-family: 'Fira Sans', sans-serif;
-	/* background-image: url("/img/section-background.svg");
-	background-repeat: no-repeat;
-	background-position: right 50vh; */
 }
 
 .container {
@@ -399,10 +397,6 @@ nav ul li button:hover {
 	width: 450px;
 }
 
-.layer .content {
-	margin-top: 75px;
-}
-
 .layer:nth-child(2) {
 	transform: translateX(5%);
 	top: 25vh;
@@ -424,22 +418,33 @@ nav ul li button:hover {
 	transform: translateX(20%);
 }
 
+.features .content {
+	max-width: 500px;
+	opacity: 0;
+}
+
 .features .content h2 {
-	width: 250px;
 	color: #7209b7;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 58px;
+	letter-spacing: 0em;
+	text-align: left;
+
 }
 
 .features .content p {
-	width: 500px;
+	text-transform: lowercase;
+	font-size: 24px;
 	color: #560bad;
-	line-height: 22px;
 }
 
 .features .content p:first-of-type {
+	margin-top: 8px;
+	margin-bottom: 30px;
 	font-style: italic;
 	color: #f72585;
-	margin-top: 30px;
-	margin-bottom: 8px;
 }
 
 .features .content p span {
@@ -447,9 +452,9 @@ nav ul li button:hover {
 	color: #f72585;
 }
 
-/*
-	Section-3
-*/
+/* =============================================================================
+	FEATURES SECTION
+============================================================================= */
 
 .section-3 {
 	color: #fff;
@@ -483,10 +488,6 @@ nav ul li button:hover {
 	position: absolute;
 	top: -20%;
 	right: 20%;
-}
-
-.section-3 .img .img2 {
-
 }
 
 /*

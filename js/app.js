@@ -49,15 +49,24 @@ window.addEventListener( 'scroll', function() {
 function stackLayerOpacity() {
 	const LAYERS = document.querySelectorAll('.layer');
 	for ( let i = 1; i < LAYERS.length-1; i++ ) {
-		const CURRENT 	= LAYERS[i],
-			PREVIOUS 	= LAYERS[i-1]
+		const CURRENT 			= LAYERS[i],
+			CURRENTONTENT		= LAYERS[i].querySelector('.content');
+			PREVIOUS 			= LAYERS[i-1],
+			PREVIOUSCONTENT		= LAYERS[i-1].querySelector('.content');
 		if( CURRENT.offsetTop <= PREVIOUS.offsetTop + PREVIOUS.offsetHeight) {
-			PREVIOUS.style.opacity = (
-				Math.abs(
-					((((CURRENT.offsetTop - PREVIOUS.offsetTop)/100)-(i/1000))
-				)/10)
-			);
-		}
+			let eq = (((CURRENT.offsetTop - PREVIOUS.offsetTop)/10)-(i/10));
+			if(eq > 0){
+				PREVIOUS.style.opacity 			= Math.abs(eq/10);
+				PREVIOUSCONTENT.style.opacity 	= Math.abs(eq/1000);
+				CURRENTONTENT.style.opacity 	= eq/10;
+			};
+		} else if(i === 1) {
+			LAYERS[0].querySelector('.content').style.opacity = 1;
+			LAYERS[1].querySelector('.content').style.opacity = 0;
+		} else {
+			CURRENTONTENT.style.opacity 	= 0;
+		};
+
 	}
 }
 
@@ -67,6 +76,7 @@ function stackLayerOpacity() {
 
  window.addEventListener( 'DOMContentLoaded', function(){
 	devicesAnimation();
+	stackLayerOpacity();
 });
 
 window.addEventListener( 'scroll', function(){
