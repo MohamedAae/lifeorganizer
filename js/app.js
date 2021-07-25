@@ -24,7 +24,7 @@ function devicesAnimation(){
  * Parallax Effect
  */
 
-window.addEventListener( 'scroll', function() {
+function parallaxEffect() {
 	let layers, layer, depth, distance, movement, translate3d;
 	distance		= this.pageYOffset;
 	layers 		= document.querySelectorAll('[data-type="parallax"]');
@@ -39,7 +39,8 @@ window.addEventListener( 'scroll', function() {
 	layer.style['-o-transform'] 		= translate3d;
 	layer.style.transform 				= translate3d;
 	}
-});
+};
+
 
 /**
  * CAPTURE EVENT:
@@ -81,4 +82,5 @@ function stackLayerOpacity() {
 
 window.addEventListener( 'scroll', function(){
 	stackLayerOpacity();
+	parallaxEffect();
 });
