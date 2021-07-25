@@ -1,0 +1,621 @@
+/* =============================================================================
+	Base
+============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Homenaje&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Fira Sans', sans-serif;
+	/* background-image: url("/img/section-background.svg");
+	background-repeat: no-repeat;
+	background-position: right 50vh; */
+}
+
+.container {
+	display: flex;
+	width: 1160px;
+	margin: auto;
+}
+
+/* =============================================================================
+ *	Navbar
+============================================================================= */
+
+.navbar {
+	padding: 20px 0;
+}
+
+.navbar .logo {
+	z-index: 2;
+}
+
+.navbar > .container,
+.footer > .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo img {
+	cursor: pointer;
+}
+
+nav ul{
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+nav ul li {
+	margin-left: 20px;
+}
+
+nav ul li:first-child {
+	margin-left: 0;
+}
+
+nav ul li a,
+nav ul li button {
+	font-size: 12px;
+	color: #7209b7;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	text-decoration: none;
+	position: relative;
+}
+
+nav ul li a::after {
+	content: "";
+	background: transparent;
+	text-align: left;
+	width: 0;
+	height: 3px;
+	display: inline-block;
+	margin-left: 0;
+	position: absolute;
+	top:17px;
+	left: 1px;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+nav ul li a:hover,
+nav ul li button:hover,
+nav ul li.active a {
+	padding-bottom: 2px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+nav ul li a:hover::after,
+nav ul li.active a::after {
+	background-color: #f72585;
+	width: 60%;
+}
+
+nav ul li button {
+	padding: 5px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	color: #fff;
+	background: #f72585;
+}
+
+nav ul li button:hover {
+	padding: 5px;
+}
+
+/* =============================================================================
+	HERO SECTION
+============================================================================= */
+
+.hero {
+	display: flex;
+	align-items: center;
+}
+
+.devices-stack {
+	display: flex;
+	flex-direction: row-reverse;
+	transform: rotate(25deg);
+	top: 0;
+	left: 0;
+	margin-top: -200px;
+	margin-left: -150px;
+}
+
+.stack--01,.stack--02,
+.stack--03,.stack--04 {
+	margin-right: 50px;
+}
+
+.stack--01, .stack--03 {
+	position: relative;
+	top: 350px;
+}
+
+.devices-stack .top,
+.devices-stack .bottom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 100%;
+	width: 260px;
+	margin-bottom: 50px;
+}
+
+.stack--02 .bottom,
+.devices-stack .top:hover,
+.devices-stack .bottom:hover {
+	opacity: 1;
+}
+
+.purple .phone-screen,
+.rose .phone-screen,
+.top .feature,
+.bottom .feature {
+	position: absolute;
+}
+
+.feature {
+	z-index: 2;
+	display: inline-flex;
+	align-items: center;
+	width: 150px;
+	height: 150px;
+	border-radius: 50px 0px 50px 50px;
+	font-family: Homenaje, sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 39px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.app-logo .logo {
+	width: 210px;
+	border-radius: 0;
+}
+
+.white .feature {
+	background-color: #f72585;
+	color: #fff;
+}
+
+.rose .feature {
+	background-color: #fff;
+	color: #f72585;
+	font-size: 30px;
+}
+
+.purple .app-description {
+	z-index: 2;
+	position: absolute;
+	color: #fff;
+	font-size: 30px;
+}
+
+.quote {
+	position: relative;
+	z-index: 3;
+	font-family: Fira Sans;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 58px;
+	letter-spacing: -0.02em;
+	text-align: left;
+}
+
+.quote p {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.quote .organize-yours {
+	font-weight: 700;
+}
+
+.quote p:first-child:before {
+	content: "“";
+	color: rgba(247, 37, 133, 0.25);
+	font-size: 250px;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: -0.02em;
+	opacity: 1;
+	position: absolute;
+	top: 0.2em;
+	left: -0.2em;
+	z-index: -1;
+}
+
+.quote p:first-child::after {
+	content: "”";
+	color: rgba(247, 37, 133, 0.25);
+	font-size: 250px;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: -0.02em;
+	opacity: 1;
+	position: absolute;
+	bottom: -0.2em;
+	right: -0.2em;
+	z-index: -1;
+}
+
+.quote cite {
+	display: block;
+	text-align: right;
+	font-family: Fira Sans;
+	font-style: normal;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 29px;
+	letter-spacing: -0.02em;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+.quote cite span.who {
+	display: block;
+	text-transform: lowercase;
+	font-weight: 400;
+	color: #f72585;
+}
+
+.fb-icon, .tw-icon{
+	width: 10px;
+	height: 10px;
+}
+
+.social-icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+/**
+ * Slide Animation
+ */
+
+.slide-in {
+	opacity: 0;
+	-webkit-animation: slide 2.5s forwards;
+	-webkit-animation-delay: 0.2s;
+	animation: slide 2.5s forwards;
+	animation-delay: 0.2s;
+}
+
+@-webkit-keyframes slide {
+	100% {
+		top: 0;
+		opacity: 0.75;
+	}
+}
+
+@keyframes slide {
+	100% {
+		top: 0;
+		opacity: 0.75;
+	}
+}
+
+/* =============================================================================
+	LOST SEARCHING SECTION
+============================================================================= */
+
+.lost-searching {
+	position: relative;
+	min-height: 85vh;
+	align-items: center;
+}
+
+.lost-searching .container {
+	min-height: 85vh;
+	align-items: center;
+}
+
+.lost-searching .background,
+.lost-searching .img {
+	z-index: -1;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.lost-searching .img {
+	z-index: 1;
+	right: 6%;
+	bottom: -3%;
+}
+
+.lost-searching .content {
+	flex: 0 1 40%;
+}
+
+.lost-searching h2 {
+	width: 250px;
+	color:  #7209b7;
+	margin-bottom: 15px;
+}
+
+.lost-searching p {
+	width: 300px;
+	line-height: 24px;
+}
+
+.lost-searching p span {
+	color: #f72585;
+}
+
+/* =============================================================================
+	FEATURES SECTION
+============================================================================= */
+
+.features {
+	position: relative;
+	min-height: 85vh;
+	margin: 15vh 0;
+}
+
+.features .container {
+	justify-content: center;
+	align-items: center;
+}
+
+.features .background {
+	position: absolute;
+	right: 0;
+	z-index: 2;
+}
+
+
+.screens-stack {
+	width: 100%;
+}
+
+.layer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	position: sticky;
+	top:  30vh;
+	height: 400px;
+	border-radius: 12px;
+	margin-bottom: 2rem;
+}
+
+.layer img {
+	width: 450px;
+}
+
+.layer .content {
+	margin-top: 75px;
+}
+
+.layer:nth-child(2) {
+	transform: translateX(5%);
+	top: 25vh;
+}
+
+.layer:nth-child(3) {
+	transform: translateX(10%);
+	top: 20vh;
+}
+
+.layer:nth-child(4),
+.layer:nth-child(5) {
+	top: 15vh;
+	transform: translateX(15%);
+}
+
+.layer:nth-child(6) {
+	top: 10vh;
+	transform: translateX(20%);
+}
+
+.features .content h2 {
+	width: 250px;
+	color: #7209b7;
+}
+
+.features .content p {
+	width: 500px;
+	color: #560bad;
+	line-height: 22px;
+}
+
+.features .content p:first-of-type {
+	font-style: italic;
+	color: #f72585;
+	margin-top: 30px;
+	margin-bottom: 8px;
+}
+
+.features .content p span {
+	font-weight: bold;
+	color: #f72585;
+}
+
+/*
+	Section-3
+*/
+
+.section-3 {
+	color: #fff;
+}
+
+.section-3 .content {
+	flex: 0 1 40%;
+}
+
+.section-3 .content p {
+	margin-bottom: 20px;
+	font-size: 25px;
+	line-height: 32px;
+}
+
+.section-3 .content .btn {
+	width: 180px;
+	background: #b5179e;
+}
+
+.section-3 .content .btn a {
+	color: #fff;
+}
+
+.section-3 .img {
+	flex: 0 1 60%;
+	position: relative;
+}
+
+.section-3 .img .img1 {
+	position: absolute;
+	top: -20%;
+	right: 20%;
+}
+
+.section-3 .img .img2 {
+
+}
+
+/*
+	Footer
+*/
+
+.footer {
+	width: 100%;
+	height: 250px;
+	color: #fff;
+	background-color: #000;
+	padding-top: 30px;
+	font-size: 14px;
+	position: relative;
+}
+
+.footer .logo {
+	flex: 0 1 33%;
+}
+
+.footer .logo p {
+	margin-top: 15px;
+	width: 300px;
+	line-height: 1.3;
+}
+
+.footer .logo p:last-child {
+	font-weight: bold;
+	text-transform: capitalize;
+	position: absolute;
+	bottom: 5%;
+}
+
+.footer .menu {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	flex: 0 1 33%;
+	margin-top: -35px;
+}
+
+.footer .menu p {
+	width: 300px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.footer .menu ul li {
+	margin-bottom: 15px;
+}
+
+.footer .menu ul li:last-child {
+	margin-bottom: 0;
+}
+
+.footer ul {
+	list-style: none;
+}
+
+.footer ul li {
+	margin-bottom: 5px;
+}
+
+.footer ul li a {
+	text-decoration: none;
+	text-transform: capitalize;
+	color: #fff;
+}
+
+.footer .social {
+	flex: 0 1 33%;
+	margin-top: 6px;
+}
+
+.footer .social p {
+	margin-bottom: 10px;
+}
+
+.section-3 .content .btn,
+.footer .social .btn {
+	display: flex;
+	height: 50px;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.footer .social .btn {
+	width: 200px;
+	background: #fff;
+	margin-bottom: 10px;
+}
+
+.section-3 .content .btn a,
+.footer .social .btn a {
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.footer .social .btn a {
+	color: #000;
+}
+
+.section-3 .content .btn a span,
+.footer .social .btn a span {
+	display: block;
+	text-align: left;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+.footer .social .social-icon {
+	position: absolute;
+	bottom: 5%;
+	right: 27%;
+}
+
+.footer .social .social-icon a {
+	text-decoration: none;
+	color: #fff;
+	margin-left: 10px;
+}
+
+.footer .social .social-icon a:first-child {
+	margin-left: 0;
+}
