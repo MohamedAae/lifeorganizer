@@ -2,15 +2,41 @@
 <html lang="en">
 
 	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Default -->
 		<title>Organizing both your documents, and life! &mdash; lifeorganizer</title>
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/responsive.css">
+		<!-- Meta -->
+		<meta name="title" content="Organizing both your documents, and life! &mdash; lifeorganizer">
+		<meta http-equiv="content-type" content="text/html" charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Life Organizer is the window explorer for mobile. With hundreds of ways, it offers to organize a wide range of files and papers. Bring sanity back to your life.">
+		<meta name="robots" content="all">
+		<!-- Facebook Open Graph -->
+		<meta property="og:url" content="/index" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Organizing both your documents, and life! &mdash; lifeorganizer" />
+		<meta property="og:description" content="Life Organizer is the window explorer for mobile. With hundreds of ways, it offers to organize a wide range of files and papers. Bring sanity back to your life." />
+		<meta property="og:image" content="https://kessgame.com/assets/img/thumbnail.png" />
+		<!-- Twitter App Card -->
+		<meta name="twitter:card" content="app">
+		<meta name="twitter:description" content="Life Organizer is the window explorer for mobile. With hundreds of ways, it offers to organize a wide range of files and papers. Bring sanity back to your life.">
+		<meta name="twitter:app:country" content="US">
+		<meta name="twitter:app:name:googleplay" content="Life Organizer">
+		<meta name="twitter:app:id:googleplay" content="com.life_organizer">
+		<meta name="twitter:app:url:googleplay" content="https://play.google.com/store/apps/details?id=com.life_organizer">
 	</head>
 
 	<body>
-		<div class="navbar">
+
+		<div class="how-it-works">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/DGIXT7ce3vQ?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div id="hide-popup"></div>
+			<div id="close-popup">X</div>
+		</div>
+
+		<nav class="navbar">
 			<div class="container">
 
 				<div class="logo">
@@ -18,82 +44,89 @@
 						<img src="img/logo.svg" alt="life organizer logo">
 					</a>
 				</div>
-				<nav>
-					<ul>
-						<li class="active">
-							<a href="/index.html">Home</a>
-						</li>
-						<li>
-							<a href="#">How It Works</a>
-						</li>
-						<li>
-							<a href="#">Contact</a>
-						</li>
-						<li>
-							<a href="https://play.google.com/store/apps/details?id=com.life_organizer" target="_blank" rel="noopener noreferrer">
-								<button class="btn">Download</button>
-							</a>
-						</li>
-					</ul>
-				</nav>
+				<ul>
+					<li class="active">
+						<a>Home</a>
+					</li>
+					<li class="video-item">
+						<a href="javascript:void(0);">How It Works</a>
+					</li>
+					<li>
+						<a href="https://play.google.com/store/apps/details?id=com.life_organizer" target="_blank" rel="noopener noreferrer">
+							<button class="btn">Download</button>
+						</a>
+					</li>
+				</ul>
+				<button class="toggle-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 
 			</div>
-		</div>
+		</nav>
 
 		<section class="hero">
+			<div class="container">
 
-				<div class="devices-stack">
-					<div class="stack--01">
-						<div class="top white" data-depth="0.40" data-type="parallax">
-							<span class="feature">document organiztion</span>
-							<img class="top" src="img/phone.svg" alt="phone">
+				<div class="devices">
+					<div class="devices-stack">
+						<div class="stack--01">
+							<div class="top white" data-depth="0.40" data-type="parallax">
+								<span class="feature">document organiztion</span>
+								<img class="top" src="img/phone.svg" alt="phone">
+							</div>
+							<div class="bottom purple" data-depth="0.50" data-type="parallax">
+								<span class="feature" s>window explorer</span>
+								<img src="img/phone.svg" alt="phone">
+								<svg width="240" height="517" viewBox="0 0 240 517" fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-screen" alt="purple phone screen">
+									<path d="M218.65 1.69727C207.944 1.69727 190.151 1.69727 189.096 1.69727C186.532 1.69727 184.873 3.59707 184.27 7.01672C182.235 19.1755 175.6 20.0114 173.64 20.0114C171.981 20.0114 68.5392 20.0114 66.8051 20.0114C64.8449 20.0114 58.1347 19.0995 56.1745 7.01672C55.6467 3.59707 53.988 1.69727 51.3492 1.69727C50.2183 1.69727 32.5005 1.69727 21.7944 1.69727C11.0883 1.69727 1.51318 13.0961 1.51318 23.963C1.51318 34.8298 1.51318 481.892 1.51318 494.81C1.51318 508.261 15.0843 515.556 21.5682 515.556C25.1118 515.556 215.333 515.556 218.877 515.556C225.361 515.556 238.932 508.261 238.932 494.81C238.932 481.892 238.932 30.1183 238.932 23.963C239.007 13.0961 229.356 1.69727 218.65 1.69727Z" fill="#7209B7" stroke="#F72585" stroke-width="2.11039"/>
+								</svg>
+							</div>
 						</div>
-						<div class="bottom purple" data-depth="0.50" data-type="parallax">
-							<img src="img/phone.svg" alt="phone">
-							<svg width="240" height="517" viewBox="0 0 240 517" fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-screen" alt="purple phone screen">
-								<path d="M218.65 1.69727C207.944 1.69727 190.151 1.69727 189.096 1.69727C186.532 1.69727 184.873 3.59707 184.27 7.01672C182.235 19.1755 175.6 20.0114 173.64 20.0114C171.981 20.0114 68.5392 20.0114 66.8051 20.0114C64.8449 20.0114 58.1347 19.0995 56.1745 7.01672C55.6467 3.59707 53.988 1.69727 51.3492 1.69727C50.2183 1.69727 32.5005 1.69727 21.7944 1.69727C11.0883 1.69727 1.51318 13.0961 1.51318 23.963C1.51318 34.8298 1.51318 481.892 1.51318 494.81C1.51318 508.261 15.0843 515.556 21.5682 515.556C25.1118 515.556 215.333 515.556 218.877 515.556C225.361 515.556 238.932 508.261 238.932 494.81C238.932 481.892 238.932 30.1183 238.932 23.963C239.007 13.0961 229.356 1.69727 218.65 1.69727Z" fill="#7209B7" stroke="#F72585" stroke-width="2.11039"/>
-							</svg>
+						<div class="stack--02">
+							<div class="top rose" data-depth="0.25" data-type="parallax">
+								<span class="feature">file categorization</span>
+								<img src="img/phone.svg" alt="phone">
+								<svg width="240" height="517" viewBox="0 0 240 517" fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-screen" alt="rose phone screen">
+									<path d="M218.65 1.69727C207.944 1.69727 190.151 1.69727 189.096 1.69727C186.532 1.69727 184.873 3.59707 184.27 7.01672C182.235 19.1755 175.6 20.0114 173.64 20.0114C171.981 20.0114 68.5392 20.0114 66.8051 20.0114C64.8449 20.0114 58.1347 19.0995 56.1745 7.01672C55.6467 3.59707 53.988 1.69727 51.3492 1.69727C50.2183 1.69727 32.5005 1.69727 21.7944 1.69727C11.0883 1.69727 1.51318 13.0961 1.51318 23.963C1.51318 34.8298 1.51318 481.892 1.51318 494.81C1.51318 508.261 15.0843 515.556 21.5682 515.556C25.1118 515.556 215.333 515.556 218.877 515.556C225.361 515.556 238.932 508.261 238.932 494.81C238.932 481.892 238.932 30.1183 238.932 23.963C239.007 13.0961 229.356 1.69727 218.65 1.69727Z" fill="#F72585" stroke="#F72585" stroke-width="2.11039"/>
+								</svg>
+							</div>
+							<div class="bottom app-logo" class="top rose" data-depth="0.30" data-type="parallax">
+								<img class="feature logo" src="img/app-logo.svg" alt="phone">
+								<img class="top" src="img/phone.svg" alt="phone">
+							</div>
 						</div>
-					</div>
-					<div class="stack--02">
-						<div class="top rose" data-depth="0.25" data-type="parallax">
-							<span class="feature">file categorization</span>
-							<img src="img/phone.svg" alt="phone">
-							<svg width="240" height="517" viewBox="0 0 240 517" fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-screen" alt="rose phone screen">
-								<path d="M218.65 1.69727C207.944 1.69727 190.151 1.69727 189.096 1.69727C186.532 1.69727 184.873 3.59707 184.27 7.01672C182.235 19.1755 175.6 20.0114 173.64 20.0114C171.981 20.0114 68.5392 20.0114 66.8051 20.0114C64.8449 20.0114 58.1347 19.0995 56.1745 7.01672C55.6467 3.59707 53.988 1.69727 51.3492 1.69727C50.2183 1.69727 32.5005 1.69727 21.7944 1.69727C11.0883 1.69727 1.51318 13.0961 1.51318 23.963C1.51318 34.8298 1.51318 481.892 1.51318 494.81C1.51318 508.261 15.0843 515.556 21.5682 515.556C25.1118 515.556 215.333 515.556 218.877 515.556C225.361 515.556 238.932 508.261 238.932 494.81C238.932 481.892 238.932 30.1183 238.932 23.963C239.007 13.0961 229.356 1.69727 218.65 1.69727Z" fill="#F72585" stroke="#F72585" stroke-width="2.11039"/>
-							</svg>
+						<div class="stack--03">
+							<div class="top purple" data-depth="0.25" data-type="parallax">
+								<p class="app-description">
+									<span style="font-size: 18px; opacity: 0.5;">Turn your phone into</span><br>highly<br><strong style="font-size: 38px;">organized</strong><br>filing<br>cabinet!
+								</p>
+								<img src="img/phone.svg" alt="phone">
+								<svg width="240" height="517" viewBox="0 0 240 517" fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-screen" alt="purple phone screen">
+									<path d="M218.65 1.69727C207.944 1.69727 190.151 1.69727 189.096 1.69727C186.532 1.69727 184.873 3.59707 184.27 7.01672C182.235 19.1755 175.6 20.0114 173.64 20.0114C171.981 20.0114 68.5392 20.0114 66.8051 20.0114C64.8449 20.0114 58.1347 19.0995 56.1745 7.01672C55.6467 3.59707 53.988 1.69727 51.3492 1.69727C50.2183 1.69727 32.5005 1.69727 21.7944 1.69727C11.0883 1.69727 1.51318 13.0961 1.51318 23.963C1.51318 34.8298 1.51318 481.892 1.51318 494.81C1.51318 508.261 15.0843 515.556 21.5682 515.556C25.1118 515.556 215.333 515.556 218.877 515.556C225.361 515.556 238.932 508.261 238.932 494.81C238.932 481.892 238.932 30.1183 238.932 23.963C239.007 13.0961 229.356 1.69727 218.65 1.69727Z" fill="#7209B7" stroke="#F72585" stroke-width="2.11039"/>
+								</svg>
+							</div>
+							<div class="bottom rose" data-depth="0.30" data-type="parallax">
+								<span class="feature">quick data access</span>
+								<img src="img/phone.svg" alt="phone">
+								<svg width="240" height="517" viewBox="0 0 240 517" fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-screen" alt="rose phone screen">
+									<path d="M218.65 1.69727C207.944 1.69727 190.151 1.69727 189.096 1.69727C186.532 1.69727 184.873 3.59707 184.27 7.01672C182.235 19.1755 175.6 20.0114 173.64 20.0114C171.981 20.0114 68.5392 20.0114 66.8051 20.0114C64.8449 20.0114 58.1347 19.0995 56.1745 7.01672C55.6467 3.59707 53.988 1.69727 51.3492 1.69727C50.2183 1.69727 32.5005 1.69727 21.7944 1.69727C11.0883 1.69727 1.51318 13.0961 1.51318 23.963C1.51318 34.8298 1.51318 481.892 1.51318 494.81C1.51318 508.261 15.0843 515.556 21.5682 515.556C25.1118 515.556 215.333 515.556 218.877 515.556C225.361 515.556 238.932 508.261 238.932 494.81C238.932 481.892 238.932 30.1183 238.932 23.963C239.007 13.0961 229.356 1.69727 218.65 1.69727Z" fill="#F72585" stroke="#F72585" stroke-width="2.11039"/>
+								</svg>
+							</div>
 						</div>
-						<div class="bottom app-logo" class="top rose" data-depth="0.30" data-type="parallax">
-							<img class="feature logo" src="img/app-logo.svg" alt="phone">
-							<img class="top" src="img/phone.svg" alt="phone">
-						</div>
-					</div>
-					<div class="stack--03">
-						<div class="top purple" data-depth="0.25" data-type="parallax">
-							<p class="app-description">
-								<span style="font-size: 18px; opacity: 0.5;">Turn your phone into</span><br>highly<br><strong style="font-size: 38px;">organized</strong><br>filing<br>cabinet!
-							</p>
-							<img src="img/phone.svg" alt="phone">
-							<svg width="240" height="517" viewBox="0 0 240 517" fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-screen" alt="purple phone screen">
-								<path d="M218.65 1.69727C207.944 1.69727 190.151 1.69727 189.096 1.69727C186.532 1.69727 184.873 3.59707 184.27 7.01672C182.235 19.1755 175.6 20.0114 173.64 20.0114C171.981 20.0114 68.5392 20.0114 66.8051 20.0114C64.8449 20.0114 58.1347 19.0995 56.1745 7.01672C55.6467 3.59707 53.988 1.69727 51.3492 1.69727C50.2183 1.69727 32.5005 1.69727 21.7944 1.69727C11.0883 1.69727 1.51318 13.0961 1.51318 23.963C1.51318 34.8298 1.51318 481.892 1.51318 494.81C1.51318 508.261 15.0843 515.556 21.5682 515.556C25.1118 515.556 215.333 515.556 218.877 515.556C225.361 515.556 238.932 508.261 238.932 494.81C238.932 481.892 238.932 30.1183 238.932 23.963C239.007 13.0961 229.356 1.69727 218.65 1.69727Z" fill="#7209B7" stroke="#F72585" stroke-width="2.11039"/>
-							</svg>
-						</div>
-						<div class="bottom rose" data-depth="0.30" data-type="parallax">
-							<img src="img/phone.svg" alt="phone">
-							<svg width="240" height="517" viewBox="0 0 240 517" fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-screen" alt="rose phone screen">
-								<path d="M218.65 1.69727C207.944 1.69727 190.151 1.69727 189.096 1.69727C186.532 1.69727 184.873 3.59707 184.27 7.01672C182.235 19.1755 175.6 20.0114 173.64 20.0114C171.981 20.0114 68.5392 20.0114 66.8051 20.0114C64.8449 20.0114 58.1347 19.0995 56.1745 7.01672C55.6467 3.59707 53.988 1.69727 51.3492 1.69727C50.2183 1.69727 32.5005 1.69727 21.7944 1.69727C11.0883 1.69727 1.51318 13.0961 1.51318 23.963C1.51318 34.8298 1.51318 481.892 1.51318 494.81C1.51318 508.261 15.0843 515.556 21.5682 515.556C25.1118 515.556 215.333 515.556 218.877 515.556C225.361 515.556 238.932 508.261 238.932 494.81C238.932 481.892 238.932 30.1183 238.932 23.963C239.007 13.0961 229.356 1.69727 218.65 1.69727Z" fill="#F72585" stroke="#F72585" stroke-width="2.11039"/>
-							</svg>
-						</div>
-					</div>
-					<div class="stack--04">
-						<div class="top" data-depth="0.25" data-type="parallax">
-							<img class="top" src="img/phone.svg" alt="phone">
-						</div>
-						<div class="bottom rose" data-depth="0.30" data-type="parallax">
-							<img src="img/phone.svg" alt="phone">
-							<svg width="240" height="517" viewBox="0 0 240 517" fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-screen" alt="rose phone screen">
-								<path d="M218.65 1.69727C207.944 1.69727 190.151 1.69727 189.096 1.69727C186.532 1.69727 184.873 3.59707 184.27 7.01672C182.235 19.1755 175.6 20.0114 173.64 20.0114C171.981 20.0114 68.5392 20.0114 66.8051 20.0114C64.8449 20.0114 58.1347 19.0995 56.1745 7.01672C55.6467 3.59707 53.988 1.69727 51.3492 1.69727C50.2183 1.69727 32.5005 1.69727 21.7944 1.69727C11.0883 1.69727 1.51318 13.0961 1.51318 23.963C1.51318 34.8298 1.51318 481.892 1.51318 494.81C1.51318 508.261 15.0843 515.556 21.5682 515.556C25.1118 515.556 215.333 515.556 218.877 515.556C225.361 515.556 238.932 508.261 238.932 494.81C238.932 481.892 238.932 30.1183 238.932 23.963C239.007 13.0961 229.356 1.69727 218.65 1.69727Z" fill="#F72585" stroke="#F72585" stroke-width="2.11039"/>
-							</svg>
+						<div class="stack--04">
+							<div class="top white" data-depth="0.25" data-type="parallax">
+								<span class="feature">time saver</span>
+								<img class="top" src="img/phone.svg" alt="phone">
+							</div>
+							<div class="bottom rose" data-depth="0.30" data-type="parallax">
+								<span class="feature">secure storage</span>
+								<img src="img/phone.svg" alt="phone">
+								<svg width="240" height="517" viewBox="0 0 240 517" fill="none" xmlns="http://www.w3.org/2000/svg" class="phone-screen" alt="rose phone screen">
+									<path d="M218.65 1.69727C207.944 1.69727 190.151 1.69727 189.096 1.69727C186.532 1.69727 184.873 3.59707 184.27 7.01672C182.235 19.1755 175.6 20.0114 173.64 20.0114C171.981 20.0114 68.5392 20.0114 66.8051 20.0114C64.8449 20.0114 58.1347 19.0995 56.1745 7.01672C55.6467 3.59707 53.988 1.69727 51.3492 1.69727C50.2183 1.69727 32.5005 1.69727 21.7944 1.69727C11.0883 1.69727 1.51318 13.0961 1.51318 23.963C1.51318 34.8298 1.51318 481.892 1.51318 494.81C1.51318 508.261 15.0843 515.556 21.5682 515.556C25.1118 515.556 215.333 515.556 218.877 515.556C225.361 515.556 238.932 508.261 238.932 494.81C238.932 481.892 238.932 30.1183 238.932 23.963C239.007 13.0961 229.356 1.69727 218.65 1.69727Z" fill="#F72585" stroke="#F72585" stroke-width="2.11039"/>
+								</svg>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -110,15 +143,13 @@
 						</blockquote>
 					</div>
 					<div class="hero-buttons">
-						<a href="#">
-							<button class="btn youtube-btn">
-								<svg width="49" height="34" viewBox="0 0 49 34" fill="none" xmlns="http://www.w3.org/2000/svg" alt="youtube icon">
-									<path d="M47.5281 5.27902C47.2567 4.25785 46.7219 3.32586 45.9772 2.57633C45.2324 1.82681 44.3039 1.28603 43.2845 1.00811C39.5317 -0.000976443 24.5317 -0.000976562 24.5317 -0.000976562C24.5317 -0.000976562 9.53174 -0.000976443 5.77901 1.00811C4.7596 1.28603 3.83106 1.82681 3.08631 2.57633C2.34157 3.32586 1.80675 4.25785 1.53537 5.27902C0.531738 9.04811 0.531738 16.9081 0.531738 16.9081C0.531738 16.9081 0.531738 24.7681 1.53537 28.5372C1.80675 29.5584 2.34157 30.4904 3.08631 31.2399C3.83106 31.9894 4.7596 32.5302 5.77901 32.8081C9.53174 33.8172 24.5317 33.8172 24.5317 33.8172C24.5317 33.8172 39.5317 33.8172 43.2845 32.8081C44.3039 32.5302 45.2324 31.9894 45.9772 31.2399C46.7219 30.4904 47.2567 29.5584 47.5281 28.5372C48.5317 24.7681 48.5317 16.9081 48.5317 16.9081C48.5317 16.9081 48.5317 9.04811 47.5281 5.27902Z" fill="#F72585"/>
-									<path d="M35.5 15.634C36.1667 16.0189 36.1667 16.9811 35.5 17.366L21.25 25.5933C20.5833 25.9782 19.75 25.497 19.75 24.7272L19.75 8.27276C19.75 7.50296 20.5833 7.02183 21.25 7.40673L35.5 15.634Z" fill="white"/>
-								</svg>
-								<p><span>WATCH</span>how it works</p>
-							</button>
-						</a>
+						<button class="btn watch-btn">
+							<svg width="49" height="34" viewBox="0 0 49 34" fill="none" xmlns="http://www.w3.org/2000/svg" alt="youtube icon">
+								<path d="M47.5281 5.27902C47.2567 4.25785 46.7219 3.32586 45.9772 2.57633C45.2324 1.82681 44.3039 1.28603 43.2845 1.00811C39.5317 -0.000976443 24.5317 -0.000976562 24.5317 -0.000976562C24.5317 -0.000976562 9.53174 -0.000976443 5.77901 1.00811C4.7596 1.28603 3.83106 1.82681 3.08631 2.57633C2.34157 3.32586 1.80675 4.25785 1.53537 5.27902C0.531738 9.04811 0.531738 16.9081 0.531738 16.9081C0.531738 16.9081 0.531738 24.7681 1.53537 28.5372C1.80675 29.5584 2.34157 30.4904 3.08631 31.2399C3.83106 31.9894 4.7596 32.5302 5.77901 32.8081C9.53174 33.8172 24.5317 33.8172 24.5317 33.8172C24.5317 33.8172 39.5317 33.8172 43.2845 32.8081C44.3039 32.5302 45.2324 31.9894 45.9772 31.2399C46.7219 30.4904 47.2567 29.5584 47.5281 28.5372C48.5317 24.7681 48.5317 16.9081 48.5317 16.9081C48.5317 16.9081 48.5317 9.04811 47.5281 5.27902Z" fill="#F72585"/>
+								<path d="M35.5 15.634C36.1667 16.0189 36.1667 16.9811 35.5 17.366L21.25 25.5933C20.5833 25.9782 19.75 25.497 19.75 24.7272L19.75 8.27276C19.75 7.50296 20.5833 7.02183 21.25 7.40673L35.5 15.634Z" fill="white"/>
+							</svg>
+							<p><span>WATCH</span>how it works</p>
+						</button>
 						<a href="https://play.google.com/store/apps/details?id=com.life_organizer" target="_blank">
 							<button class="btn google-play-btn">
 								<img src="img/google-play-icon.svg" alt="google play icon">
@@ -145,6 +176,7 @@
 					</div>
 				</div>
 
+			</div>
 		</section>
 
 		<section class="lost-searching">
@@ -159,11 +191,11 @@
 				<div class="content">
 					<h2>lost searching for your documents?</h2>
 					<p>
-						Life Organizer is <span>hassle-free</span> experience that saves you <span>3.5 hours</span> of average time for <i><searching</i> for youd documents.
+						Life Organizer is <span>hassle-free</span> experience that saves you <span>3.5 hours</span> of average time for <i>searching</i> for youd documents.
 					</p>
 				</div>
-				<div class="img">
-					<img src="img/graphics.svg" alt="an illustration of a man searching through files" data-depth="0.13" data-type="parallax">
+				<div class="img" data-depth="0.13" data-type="parallax">
+					<img src="img/graphics.svg" alt="an illustration of a man searching through files">
 				</div>
 
 			</div>
@@ -265,7 +297,7 @@
 
 			</div>
 		</section>
-		<section style="height: 80vh; display: block;"></section>
+
 		<footer>
 			<div class="container">
 
@@ -291,21 +323,21 @@
 
 			    <div class="social">
 					<p class="heading">&mdash; Life Organizer App:</p>
-					<a href="#">
-						<button class="btn youtube-btn">
-							<svg width="49" height="34" viewBox="0 0 49 34" fill="none" xmlns="http://www.w3.org/2000/svg" alt="youtube icon">
-								<path d="M47.5281 5.27902C47.2567 4.25785 46.7219 3.32586 45.9772 2.57633C45.2324 1.82681 44.3039 1.28603 43.2845 1.00811C39.5317 -0.000976443 24.5317 -0.000976562 24.5317 -0.000976562C24.5317 -0.000976562 9.53174 -0.000976443 5.77901 1.00811C4.7596 1.28603 3.83106 1.82681 3.08631 2.57633C2.34157 3.32586 1.80675 4.25785 1.53537 5.27902C0.531738 9.04811 0.531738 16.9081 0.531738 16.9081C0.531738 16.9081 0.531738 24.7681 1.53537 28.5372C1.80675 29.5584 2.34157 30.4904 3.08631 31.2399C3.83106 31.9894 4.7596 32.5302 5.77901 32.8081C9.53174 33.8172 24.5317 33.8172 24.5317 33.8172C24.5317 33.8172 39.5317 33.8172 43.2845 32.8081C44.3039 32.5302 45.2324 31.9894 45.9772 31.2399C46.7219 30.4904 47.2567 29.5584 47.5281 28.5372C48.5317 24.7681 48.5317 16.9081 48.5317 16.9081C48.5317 16.9081 48.5317 9.04811 47.5281 5.27902Z" fill="#F72585"/>
-								<path d="M35.5 15.634C36.1667 16.0189 36.1667 16.9811 35.5 17.366L21.25 25.5933C20.5833 25.9782 19.75 25.497 19.75 24.7272L19.75 8.27276C19.75 7.50296 20.5833 7.02183 21.25 7.40673L35.5 15.634Z" fill="white"/>
-							</svg>
-							<p><span>WATCH</span>how it works</p>
-						</button>
-					</a>
+                    <div class="social-container">
+					<button class="btn watch-btn">
+						<svg width="49" height="34" viewBox="0 0 49 34" fill="none" xmlns="http://www.w3.org/2000/svg" alt="youtube icon">
+							<path d="M47.5281 5.27902C47.2567 4.25785 46.7219 3.32586 45.9772 2.57633C45.2324 1.82681 44.3039 1.28603 43.2845 1.00811C39.5317 -0.000976443 24.5317 -0.000976562 24.5317 -0.000976562C24.5317 -0.000976562 9.53174 -0.000976443 5.77901 1.00811C4.7596 1.28603 3.83106 1.82681 3.08631 2.57633C2.34157 3.32586 1.80675 4.25785 1.53537 5.27902C0.531738 9.04811 0.531738 16.9081 0.531738 16.9081C0.531738 16.9081 0.531738 24.7681 1.53537 28.5372C1.80675 29.5584 2.34157 30.4904 3.08631 31.2399C3.83106 31.9894 4.7596 32.5302 5.77901 32.8081C9.53174 33.8172 24.5317 33.8172 24.5317 33.8172C24.5317 33.8172 39.5317 33.8172 43.2845 32.8081C44.3039 32.5302 45.2324 31.9894 45.9772 31.2399C46.7219 30.4904 47.2567 29.5584 47.5281 28.5372C48.5317 24.7681 48.5317 16.9081 48.5317 16.9081C48.5317 16.9081 48.5317 9.04811 47.5281 5.27902Z" fill="#F72585"/>
+							<path d="M35.5 15.634C36.1667 16.0189 36.1667 16.9811 35.5 17.366L21.25 25.5933C20.5833 25.9782 19.75 25.497 19.75 24.7272L19.75 8.27276C19.75 7.50296 20.5833 7.02183 21.25 7.40673L35.5 15.634Z" fill="white"/>
+						</svg>
+						<p><span>WATCH</span>how it works</p>
+					</button>
 					<a href="https://play.google.com/store/apps/details?id=com.life_organizer" target="_blank">
 						<button class="btn google-play-btn">
 							<img src="img/google-play-icon.svg" alt="google play icon">
 							<p><span>get it on</span>google play</p>
 						</button>
 					</a>
+                    </div>
 					<div class="social-icons">
 						<a href="https://www.facebook.com/sharer/sharer.php?u=https://ovvy.com/lifeorganizer/" target="_blank" rel="noopener noreferrer">
 							<svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="fb-icon" alt="facebook-icon">
@@ -318,12 +350,20 @@
 							</svg>
 						</a>
 					</div>
-				</div>
 
+				</div>
+                <p class="copyright">&copy; copy right 2021</p>
 			</div>
 		</footer>
 
-
+		<script>
+			let toggleBtn = document.querySelector(".toggle-menu");
+			let tLinks = document.querySelector("ul");
+			toggleBtn.onclick = function () {
+			// Toggle class "open" on links
+			tLinks.classList.toggle("open");
+			}
+		</script>
 		<script src="js/app.js"></script>
 
 	</body>

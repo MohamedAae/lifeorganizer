@@ -2,8 +2,7 @@
  * ANIMATION:
  * Hero section animation
  */
-
-function animateIn(element, timeInterval) {
+function animateIn( element, timeInterval ) {
 	setTimeout( function(){
 		element.classList.add('slide-in');
 	}, timeInterval);
@@ -14,8 +13,8 @@ function devicesAnimation(){
 	for ( let i = 0; i < STACKS.length; i++ ) {
 		const TOPDEVICE		= STACKS[i].querySelector('.top'),
 			BOTTOMDEVICE	= STACKS[i].querySelector('.bottom');
-		animateIn(TOPDEVICE, (i*240));
-		animateIn(BOTTOMDEVICE, (i*450))
+		animateIn( TOPDEVICE, (i*240) );
+		animateIn( BOTTOMDEVICE, (i*450) )
 	}
 };
 
@@ -23,7 +22,6 @@ function devicesAnimation(){
  * ANIMATION:
  * Parallax Effect
  */
-
 function parallaxEffect() {
 	let layers, layer, depth, distance, movement, translate3d;
 	distance		= this.pageYOffset;
@@ -31,7 +29,7 @@ function parallaxEffect() {
 	for ( let i = 0; i < layers.length; i++ ) {
 	layer 								= layers[i];
 	depth 								= layer.getAttribute('data-depth');
-	movement							= -(distance * depth);
+	movement							= -( distance * depth );
 	translate3d 						= 'translate3d(0, ' + movement + 'px, 0)';
 	layer.style['-webkit-transform'] 	= translate3d;
 	layer.style['-moz-transform'] 		= translate3d;
@@ -46,7 +44,6 @@ function parallaxEffect() {
  * CAPTURE EVENT:
  * Capture when feature screen added to stack.
  */
-
 function stackLayerOpacity() {
 	const LAYERS = document.querySelectorAll('.layer');
 	for ( let i = 1; i < LAYERS.length-1; i++ ) {
@@ -55,10 +52,10 @@ function stackLayerOpacity() {
 			PREVIOUS 			= LAYERS[i-1],
 			PREVIOUSCONTENT		= LAYERS[i-1].querySelector('.content');
 		if( CURRENT.offsetTop <= PREVIOUS.offsetTop + PREVIOUS.offsetHeight) {
-			let eq = (((CURRENT.offsetTop - PREVIOUS.offsetTop)/10)-(i/10));
-			if(eq > 0){
-				PREVIOUS.style.opacity 			= Math.abs(eq/10);
-				PREVIOUSCONTENT.style.opacity 	= Math.abs(eq/1000);
+			let eq = ( ((CURRENT.offsetTop - PREVIOUS.offsetTop)/10) - (i/10) );
+			if( eq > 0 ){
+				PREVIOUS.style.opacity 			= Math.abs( eq/10 );
+				PREVIOUSCONTENT.style.opacity 	= Math.abs( eq/1000 );
 				CURRENTONTENT.style.opacity 	= eq/10;
 			};
 		} else if(i === 1) {
@@ -72,12 +69,71 @@ function stackLayerOpacity() {
 }
 
 /**
+ * Screen stacks background height
+ */
+function stackBackgroundHeight() {
+	let background		= document.querySelector('.screens-stack .background');
+		lastStackDiv	= document.querySelector('.layer.null'),
+		divHeight		= lastStackDiv.offsetHeight,
+		appctaDiv		= document.querySelector('.app-cta'),
+		appctaHeight	= appctaDiv.offsetHeight;
+
+	background.style.height = ( divHeight*4 + appctaHeight ) + 'px';
+}
+
+/**
+ * Video popup
+ */
+function showVidePopup( modal ) {
+	let videoBtn	= document.getElementsByClassName('watch-btn'),
+		videoItem	= document.querySelector('.video-item');
+	for ( btn of videoBtn ) {
+		btn.addEventListener( 'click', function() {
+			modal.classList.add('show');
+			lockScroll();
+		} )
+	}
+	videoItem.addEventListener( 'click', function() {
+		modal.classList.add('show');
+		lockScroll();
+	} )
+}
+
+function closeVideoPopup( modal ) {
+	let hidePopup	= document.getElementById('hide-popup'),
+		closeBtn	= document.getElementById('close-popup');
+	document.body.addEventListener( 'click', event => {
+		if ( event.target !== hidePopup && event.target !== closeBtn ) {
+			return
+		}
+		modal.classList.remove('show');
+		unlockScroll();
+	})
+}
+
+function lockScroll() {
+	const BODY			= document.body;
+	BODY.style.overflow	= 'hidden';
+	BODY.scroll			= 'no';
+}
+
+function unlockScroll() {
+	const BODY			= document.body;
+	BODY.style.overflow	= 'auto';
+	BODY.scroll			= 'yes';
+}
+
+/**
  * Call Functions
  */
 
  window.addEventListener( 'DOMContentLoaded', function(){
+	const videoModal = document.querySelector('.how-it-works');
 	devicesAnimation();
 	stackLayerOpacity();
+	stackBackgroundHeight();
+	showVidePopup( videoModal );
+	closeVideoPopup( videoModal );
 });
 
 window.addEventListener( 'scroll', function(){
