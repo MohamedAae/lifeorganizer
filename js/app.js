@@ -19,28 +19,6 @@ function devicesAnimation(){
 };
 
 /**
- * ANIMATION:
- * Parallax Effect
- */
-function parallaxEffect() {
-	let layers, layer, depth, distance, movement, translate3d;
-	distance		= this.pageYOffset;
-	layers 		= document.querySelectorAll('[data-type="parallax"]');
-	for ( let i = 0; i < layers.length; i++ ) {
-	layer 								= layers[i];
-	depth 								= layer.getAttribute('data-depth');
-	movement							= -( distance * depth );
-	translate3d 						= 'translate3d(0, ' + movement + 'px, 0)';
-	layer.style['-webkit-transform'] 	= translate3d;
-	layer.style['-moz-transform'] 		= translate3d;
-	layer.style['-ms-transform'] 		= translate3d;
-	layer.style['-o-transform'] 		= translate3d;
-	layer.style.transform 				= translate3d;
-	}
-};
-
-
-/**
  * CAPTURE EVENT:
  * Capture when feature screen added to stack.
  */
