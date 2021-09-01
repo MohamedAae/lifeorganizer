@@ -241,11 +241,7 @@
 		margin-bottom: 20px;
 	}
 
-	footer .social {
-		margin: 20px auto;
-	}
-
-	.social-container{
+	.social-container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -277,5 +273,7 @@
 
 	.app-cta .content  {
 		margin: auto;
+		width: 90%;
+		padding: 50px 0;
 	}
 }
