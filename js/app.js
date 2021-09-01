@@ -1,4 +1,15 @@
 /**
+ * Responsive nav toggle
+ */
+function responsiveNav() {
+	let toggleBtn = document.querySelector(".toggle-menu"),
+		navLinks = document.querySelector("ul");
+	toggleBtn.onclick = function () {
+		navLinks.classList.toggle("open");
+	}
+}
+
+/**
  * ANIMATION:
  * Hero section animation
  */
@@ -20,22 +31,9 @@ function devicesAnimation(){
 };
 
 /**
- * Screen stacks background height
- */
-function stackBackgroundHeight() {
-	let background		= document.querySelector('.screens-stack .background');
-		lastStackDiv	= document.querySelector('.layer.null'),
-		divHeight		= lastStackDiv.offsetHeight,
-		appctaDiv		= document.querySelector('.app-cta'),
-		appctaHeight	= appctaDiv.offsetHeight;
-
-	background.style.height = ( divHeight*4 + appctaHeight ) + 'px';
-}
-
-/**
  * Video popup
  */
-function showVidePopup( modal ) {
+function showVideoPopup( modal ) {
 	let videoBtn	= document.getElementsByClassName('watch-btn'),
 		videoItem	= document.querySelector('.video-item');
 	for ( btn of videoBtn ) {
@@ -62,6 +60,9 @@ function closeVideoPopup( modal ) {
 	})
 }
 
+/**
+ * Helper Functions
+ */
 function lockScroll() {
 	const BODY			= document.body;
 	BODY.style.overflow	= 'hidden';
@@ -77,11 +78,10 @@ function unlockScroll() {
 /**
  * Call Functions
  */
-
  window.addEventListener( 'DOMContentLoaded', function(){
+	responsiveNav();
 	const videoModal = document.querySelector('.how-it-works');
 	devicesAnimation();
-	stackBackgroundHeight();
-	showVidePopup( videoModal );
+	showVideoPopup( videoModal );
 	closeVideoPopup( videoModal );
 });
