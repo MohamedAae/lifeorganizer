@@ -4,6 +4,7 @@
  */
 function animateIn( element, timeInterval ) {
 	setTimeout( function(){
+		element.style.visibility = 'visible';
 		element.classList.add('slide-in');
 	}, timeInterval);
 };
@@ -14,37 +15,9 @@ function devicesAnimation(){
 		const TOPDEVICE		= STACKS[i].querySelector('.top'),
 			BOTTOMDEVICE	= STACKS[i].querySelector('.bottom');
 		animateIn( TOPDEVICE, (i*240) );
-		animateIn( BOTTOMDEVICE, (i*450) )
+		animateIn( BOTTOMDEVICE, (i*450) );
 	}
 };
-
-/**
- * CAPTURE EVENT:
- * Capture when feature screen added to stack.
- */
-function stackLayerOpacity() {
-	const LAYERS = document.querySelectorAll('.layer');
-	for ( let i = 1; i < LAYERS.length-1; i++ ) {
-		const CURRENT 			= LAYERS[i],
-			CURRENTONTENT		= LAYERS[i].querySelector('.content');
-			PREVIOUS 			= LAYERS[i-1],
-			PREVIOUSCONTENT		= LAYERS[i-1].querySelector('.content');
-		if( CURRENT.offsetTop <= PREVIOUS.offsetTop + PREVIOUS.offsetHeight) {
-			let eq = ( ((CURRENT.offsetTop - PREVIOUS.offsetTop)/10) - (i/10) );
-			if( eq > 0 ){
-				PREVIOUS.style.opacity 			= Math.abs( eq/10 );
-				PREVIOUSCONTENT.style.opacity 	= Math.abs( eq/1000 );
-				CURRENTONTENT.style.opacity 	= eq/10;
-			};
-		} else if(i === 1) {
-			LAYERS[0].querySelector('.content').style.opacity = 1;
-			LAYERS[1].querySelector('.content').style.opacity = 0;
-		} else {
-			CURRENTONTENT.style.opacity 	= 0;
-		};
-
-	}
-}
 
 /**
  * Screen stacks background height
@@ -108,13 +81,7 @@ function unlockScroll() {
  window.addEventListener( 'DOMContentLoaded', function(){
 	const videoModal = document.querySelector('.how-it-works');
 	devicesAnimation();
-	stackLayerOpacity();
 	stackBackgroundHeight();
 	showVidePopup( videoModal );
 	closeVideoPopup( videoModal );
-});
-
-window.addEventListener( 'scroll', function(){
-	stackLayerOpacity();
-	parallaxEffect();
 });
